@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+signal update 
 
 # Declare member variables here. Examples:
 export var move_speed = 250
