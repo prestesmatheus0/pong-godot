@@ -28,7 +28,6 @@ _global_script_class_icons={
 
 config/name="godot-pong"
 run/main_scene="res://scenes/Game/Game.tscn"
-config/icon="res://icon.png"
 
 [display]
 

@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-export var initial_ball_speed = 300
-export var speed_commulator = 50
+export var initial_ball_speed = 500
+export var speed_commulator = 100
 var ball_speed = initial_ball_speed
 
 var hit_counter = 0 
@@ -35,7 +35,9 @@ func _physics_process(delta):
 			else:
 				y = direction.y
 				direction = Vector2(direction.x, y).normalized() * (ball_speed * hit_counter * speed_commulator)
-
+			$RacketSound.play()
+		else:
+			$WallSound.play()
 func reset():
 	position = Vector2(512, 256)
 	direction = Vector2()
